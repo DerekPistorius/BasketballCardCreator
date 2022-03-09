@@ -1,0 +1,29 @@
+NBA Basketball Card Creator
+---------------------------
+
+   * Minimum Viable Product Features *
+
+        * Interactive Front End *
+
+            Input fields - Player name / Jersey Number / Player positon 
+            Buttons - "Create" player name / "Select" Jersey number / "Choose" player position 
+
+               * 3 Main Features *
+
+                    INPUTS - User can select a player name / user can pick a jersey number / user can select a 
+                    position (uses http method POST)
+
+                    UPDATE - User can update any of the above mentioned items (Uses http method PUT)
+
+                    Delete - User can remove any of the above mentioned items (Uses http method DELETE)
+
+                        * Include Styles *
+
+                            Background of website will be basketball related / Custom basketball card
+                            that can be customized
+
+                            
+
+
+
+

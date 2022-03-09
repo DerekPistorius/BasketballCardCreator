@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+<header>
+  <h4 id="time"><!-- clock widget start -->
+    <script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href","https://s.bookcdn.com//css/cl/bw-cl-126el.css?v=0.0.1"); document.getElementsByTagName("head")[0].appendChild(css_file); </script> <div id="tw_7_1241360871"><div style="width:126px; height:82px; margin: 0 auto;"><a href="https://booked.net/time/salt-lake-city-1239">Salt Lake City</a><br/></div></div> <script type="text/javascript"> function setWidgetData_1241360871(data){ if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = ''; var params = data.results[i]; objMainBlock = document.getElementById('tw_'+params.widget_type+'_'+params.widget_id); if(objMainBlock !== null) objMainBlock.innerHTML = params.html_code; } } } var clock_timer_1241360871 = -1; widgetSrc = "https://widgets.booked.net/time/info?ver=2;domid=209;type=7;id=1241360871;scode=124;city_id=1239;wlangid=1;mode=1;details=0;background=ffffff;border_color=ffffff;color=ffffff;add_background=ffffff;add_color=ffaa00;head_color=ffffff;border=0;transparent=0"; var widgetUrl = location.href; widgetSrc += '&ref=' + widgetUrl; var wstrackId = ""; if (wstrackId) { widgetSrc += ';wstrackId=' + wstrackId + ';' } var timeBookedScript = document.createElement("script"); timeBookedScript.setAttribute("type", "text/javascript"); timeBookedScript.src = widgetSrc; document.body.appendChild(timeBookedScript); </script>
+    <!-- clock widget end -->
+    </h3>
+</header>
+
+<picture>
+  <img src="Blank Card Edit.jpg"
+width="512"
+height="908"
+style = "position:fixed; right:90px; top:109px"
+>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<img src="Blank Form.jpg"
+width="512"
+height="908"
+style = "position:fixed; left:90px; top:109px"
+>
+
+<img id="bballpic"
+src="basketball.jpg"
+style = "position:fixed; left:720px; bottom:300px; opacity:.9"
+>
+</picture>
+
+<div id="playerName">
+  <label for="Playername">Player Name:</label><br>
+  <input type="text" id="Playername" name="Playername" placeholder="Ex: Andrew Smith"><br>
+  <button onclick="playerSubmit()" id="playerSubmit" type="button">Submit</button>
+</div>
+
+<script>
+     function playerSubmit() {
+        const pnSubmit = document.getElementById("Playername").value;
+        axios.post("http://localhost:4000/api/postName",{
+          name: pnSubmit
+        }).then((response) => {
+          const playerName = document.getElementById("playerCardName")
+          const name1 = response.data
+          playerName.innerText = name1
+        })  
+      }
+</script>
+
+<div id="jerseyNumber">
+  <label for="jerseynumber">Jersey Number:</label><br>
+  <input type="text" id="jerseynumber" name="jerseynumber" placeholder="Ex: #00"><br>
+  <button onclick="jerseySubmit()" id="jerseySubmit" type="button">Submit</button>
+</div>
+
+<script>
+  function jerseySubmit() {
+     const jSubmit = document.getElementById("jerseynumber").value;
+     axios.post("http://localhost:4000/api/postJersey",{
+       name: jSubmit
+     }).then((response) => {
+       const jerseyNumber = document.getElementById("playerCardNumber")
+       const number1 = response.data
+       jerseyNumber.innerText = number1
+     })  
+   }
+</script>
+
+<div id="position">
+  <label for="Position">Position:</label><br>
+  <input type="text" id="postition" name="postition" placeholder="Ex: Point Guard"><br>
+  <button onclick="positionSubmit()" id="positionSubmit" type="button">Submit</button>
+</div>
+
+<script>
+  function positionSubmit() {
+     const pSubmit = document.getElementById("postition").value;
+     axios.post("http://localhost:4000/api/postPosition",{
+       name: pSubmit
+     }).then((response) => {
+       const postition = document.getElementById("playerCardPosition")
+       const position1 = response.data
+       playerCardPosition.innerText = position1
+     })  
+   }
+</script>
+
+<div id="clearCardData">
+    <button onclick="clearCardData()" id="clearCardData" type="button">Clear Card Data</button>
+</div>
+
+<script>
+  function clearCardData() {
+     const pSubmit = document.getElementById("postition").value;
+     const jSubmit = document.getElementById("jerseynumber").value;
+     const pnSubmit = document.getElementById("Playername").value;
+     axios.delete("http://localhost:4000/api/delete",{
+       name: pSubmit, jSubmit, pnSubmit,
+     }).then((response) => {
+       const postition = document.getElementById("playerCardPosition")
+       const jerseyNumber = document.getElementById("playerCardNumber")
+       const playerName = document.getElementById("playerCardName")
+       const position1 = response.data
+       const number1 = response.data
+       const name1 = response.data
+       playerCardPosition.innerText = position1
+       jerseyNumber.innerText = number1
+       playerName.innerText = name1
+     })  
+   }
+</script>
+
+<div id="appText">
+<p>Click _____ for the latest app version</p>
+</div>
+
+<div id="appVersionClick">
+  <button onclick="appVersionClick()" id="appVersionClick" type="button">Here</button>
+</div>
+
+<script>
+  function appVersionClick() {
+     const appSubmit = document.getElementById("appVersionClick").value;
+     axios.get("http://localhost:4000/api/getAppVersion",{
+       name: appSubmit
+     }).then((response) => {
+       const appVersion = document.getElementById("appVersion")
+       const appVersion1 = response.data
+       appVersion.innerText = appVersion1
+     })  
+   }
+</script>
+<script>
+  var dt = new Date();
+  document.getElementById('date-time').innerHTML=dt;
+  </script>
+
+
+<section>
+<div id="appVersion">
+  <id="appVersion" name="appVersion" style="color:white">
+</div>
+
+<div id="playerCardName">
+    <id="playerCardName" name="playerCardName" style="color:white">
+</div>
+
+<div id="playerCardNumber">
+    <id="playerCardNumber" name="playerCardNumber" style="color:white">
+</div>
+
+<div id="playerCardPosition">
+    <id="playerCardPosition" name="playerCardPosition" style="color:white">
+</div>
+</section>
+
+</body>
+<footer>
+  <ul id="instructions" style="list-style-type:none">
+      <h1 id="instructionsHeader">Instructions</h1>
+      <li>Enter Player Name then press Submit</li>
+      <li>Enter Jersey Number then press Submit</li>
+      <li>Enter Position then press Submit</li>
+      <li>See your card on the right!</li>
+      <li>Click the Clear Card Data button to remove the created card data</li>
+      <li>Click on "Here" to see the latest app version</li>
+  </ul>
+
+</footer>
+<div id="border"></div>
+</html>
+

@@ -1,0 +1,165 @@
+body {
+    background-image: url("hoop2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+h1 {
+    color: white
+}
+
+#playerName {
+    position: fixed;
+    left: 260px;
+    top: 405px;
+    text-align: center;
+    background-color: grey;
+    font-size: 20px;
+}
+
+#jerseyNumber {
+    position: fixed;
+    left: 260px;
+    top: 505px;
+    text-align: center;
+    background-color: grey;
+    font-size: 20px;
+}
+
+#position {
+    position: fixed;
+    left: 260px;
+    top: 605px;
+    text-align: center;
+    background-color: grey;
+    font-size: 20px;
+}
+
+#playerCardName {
+    position: fixed;
+    color: white;
+    right: 110px;
+    top: 215px;
+    font-size: 60px;
+    text-align: center;
+    width: 445px;
+    height: 45px ;
+    background-color: black;
+    opacity: 93%;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+
+#playerCardNumber {
+    position: fixed;
+    color: white;
+    right: 125px;
+    top: 450px;
+    font-size: 60px;
+    text-align: center;
+    width: 100px;
+    background-color: black;
+    opacity: 88%;
+
+}
+#playerCardPosition {
+    position: fixed;
+    color: white;
+    right: 110px;
+    top: 895px;
+    font-size: 60px;
+    text-align: center;
+    width: 445px;
+    height: 45px;
+    background-color: black;
+    opacity: 88%;
+    font-size: 40px;
+
+}
+
+#clearCardData {
+    position: fixed;
+    top: 705px;
+    left: 290px;
+}
+
+
+#bballpic {
+    animation: fadeInAnimation ease 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+#appVersionClick {
+    position: fixed;
+    right: 247px;
+    bottom: 35px;
+    font-size: 11px;
+}
+
+#appText {
+    color:white;
+    position: fixed;
+    right: 85px;
+    bottom: 19px;
+}
+
+#appVersion{
+    position: fixed;
+    color: white;
+    right: 85px;
+    bottom: 1px;
+    text-align: center;
+    width: 120px;
+    height: 25px;
+    background-color: black;
+    opacity: 88%;
+    font-size: 15px;}
+
+#instructions {
+    color: white;
+    font-size: 17px;
+    position: fixed;
+    right: 730px;
+    bottom: 55px;
+    text-align: center;
+
+}
+
+#instructionsHeader{
+    text-decoration: underline;
+    text-align: center;
+    list-style: none;
+
+}
+
+#border{
+    width: 500px;
+    height: 200px;
+    border: 2px solid white;
+    background: transparent;
+    position: fixed;
+    right: 705px;
+    bottom: 55px;
+    
+}
+
+#time{
+    position: fixed;
+    right: 885px;
+    font-size: 15px;
+    text-decoration: underline;
+}

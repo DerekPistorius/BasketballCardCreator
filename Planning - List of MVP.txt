@@ -1,0 +1,9 @@
+Planning - *List Of MVP Features*
+
+        *Form that user can input data (player name, jersey number, position)
+
+        *Basketball card that updates with user information that was entered
+
+        *User has ability to input, update, and delete information on card
+
+        
